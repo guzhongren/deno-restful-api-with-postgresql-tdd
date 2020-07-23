@@ -1,0 +1,8 @@
+POST http://localhost:8000/api/v1/users HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=foo&password=123
+
+
+
+

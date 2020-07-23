@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trest</title>
+</head>
+
+<body>
+  test
+  <script>
+    fetch("http://localhost:8000/api/v1/users", {
+        method: "POST",
+        body: 'name=foo&password=123',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Accept: 'application/json',
+        },
+        mode: "same-origin",
+      }).then(response => response.json())
+      .then(json => {
+        console.log(json)
+      })
+  </script>
+</body>
+
+</html>
