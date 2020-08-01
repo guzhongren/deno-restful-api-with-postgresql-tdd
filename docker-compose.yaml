@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 0
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin@admin.com'
+      PGADMIN_DEFAULT_PASSWORD: '000000'
+    ports:
+      - 9099:80
+    depends_on:
+    - db
+  restful:
+    image: guzhongren/deno-restful-api-with-pg
+    environment:
+      DB_HOST: db
+    ports:
+      - 8000:8000
+    links:
+      - db
+    depends_on:
+    - db
+    restart: on-failure
