@@ -20,7 +20,7 @@ updateDeps:
 cache:
 	deno cache -r --lock=lock.json ./deps.ts
 
-dockerfile:
+image:
 	docker build -t guzhongren/deno-restful-api-with-pg .
 
 docker-compose:

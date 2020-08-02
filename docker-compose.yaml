@@ -24,7 +24,7 @@ services:
     environment:
       DB_HOST: db
     ports:
-      - 8000:8000
+      - 9000:8000
     links:
       - db
     depends_on:
