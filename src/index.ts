@@ -1,7 +1,7 @@
 import { Application, send } from "../deps.ts";
 import { APP_HOST, APP_PORT } from "./config.ts";
 import router from "./router.ts";
-import client from "./Utils/client.ts";
+
 
 import errorMiddleware from "./middlewares/error.ts";
 import timeMiddleware from "./middlewares/time.ts";
@@ -34,10 +34,6 @@ export function createApplication(): Promise<Application> {
 }
 
 if (import.meta.main) {
-  await client.connect();
-  console.info("数据库链接成功！");
   const app = await createApplication();
   await listenToServer(app);
-
-  await client.end();
 }

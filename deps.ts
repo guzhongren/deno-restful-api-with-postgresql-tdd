@@ -29,3 +29,4 @@ export {
   Stub,
   resolves,
 } from "https://raw.githubusercontent.com/udibo/mock/master/mod.ts";
+export { DataTypes, Database, Model } from 'https://deno.land/x/denodb/mod.ts';
