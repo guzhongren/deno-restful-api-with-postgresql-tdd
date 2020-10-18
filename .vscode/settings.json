@@ -1,15 +1,14 @@
 {
-  "sqltools.connections": [
-    {
-      "askForPassword": false,
-      "database": "postgres",
-      "driver": "PostgreSQL",
-      "name": "RBAC",
-      "password": "000000",
-      "port": 5432,
-      "previewLimit": 50,
-      "server": "localhost",
-      "username": "postgres"
-    }
-  ]
+  "deno.enable": true,
+  "deno.unstable": true,
+  "deno.import_intellisense_origins": {
+    "https://deno.land": true,
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno",
+  },
+  "deno.lint": true,
 }
