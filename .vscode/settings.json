@@ -11,4 +11,17 @@
     "editor.defaultFormatter": "denoland.vscode-deno",
   },
   "deno.lint": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "PG container",
+      "group": "PG container",
+      "database": "postgres",
+      "username": "postgres",
+      "password": "0"
+    }
+  ],
 }

@@ -7,6 +7,9 @@ test:
 db:
 	cd ./_resources/Iaas && docker-compose up -d
 
+killDB:
+	cd ./_resources/Iaas && docker-compose stop
+
 bundle:
 	mkdir dist
 	deno bundle src/index.ts dist/platform.js
